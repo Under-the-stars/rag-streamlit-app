@@ -1,8 +1,9 @@
 import streamlit as st
 
-# 🧠 MUST BE FIRST Streamlit call
+# ✅ THIS MUST BE FIRST — before ANYTHING else using Streamlit
 st.set_page_config(page_title="RAG QA from URL", layout="centered")
 
+# Now import other libraries
 from newspaper import Article
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
@@ -11,6 +12,9 @@ import faiss
 import os
 import pickle
 import hashlib
+
+# Now your Streamlit UI code can begin...
+st.title("🧠 Multi-Article RAG QA")
 
 
 # Load models
