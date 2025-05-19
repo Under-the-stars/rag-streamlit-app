@@ -1,0 +1,9 @@
+streamlit
+newspaper3k
+lxml_html_clean
+sentence-transformers
+faiss-cpu
+transformers
+accelerate
+bitsandbytes
+huggingface_hub
