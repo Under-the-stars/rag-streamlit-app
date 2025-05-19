@@ -1,9 +1,17 @@
 import streamlit as st
+
+# 🧠 MUST BE FIRST Streamlit call
+st.set_page_config(page_title="RAG QA from URL", layout="centered")
+
 from newspaper import Article
 from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import numpy as np
 import faiss
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+import os
+import pickle
+import hashlib
+
 
 # Load models
 @st.cache_resource
